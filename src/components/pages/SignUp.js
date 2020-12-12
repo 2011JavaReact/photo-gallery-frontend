@@ -2,6 +2,7 @@ import Axios from 'axios';
 import React from "react";
 import { useState } from "react";
 import NavBar from '../NavBar';
+import Footer from '../Footer';
 
 const SignUp = () => {
     const [formData, setFormdata] = useState({});
@@ -17,7 +18,7 @@ const SignUp = () => {
     }
 
     return (
-        <body class="text-center text-white bg-dark">
+        <body className="text-center text-white bg-dark">
             <NavBar onPage="signup" />
             <section id="photos-form-main">
                 <div className="form-wrap">
@@ -36,6 +37,7 @@ const SignUp = () => {
                     </form>
                 </div>
             </section>
+            <Footer/>
         </body>
     )
 }
