@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import './styles/NavBar.css';
+import { useSelector } from "react-redux";
 
 class NavBar extends Component {
-
-    // constructor(props) {
-    //     super(props);
-    // }
-
 
     render() {
         const onPage = this.props.onPage;
@@ -41,19 +37,29 @@ class NavBar extends Component {
                                     <a className="nav-link" href="/photos">Photos</a>
                                 </li>
                             }
+                            {onPage === 'addphotos' &&
+                                <li className="nav-item active">
+                                    <a className="nav-link" aria-current="page" href="/addphotos">Add Photos</a>
+                                </li>
+                            }
+                            {onPage !== 'addphotos' &&
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/addphotos">Add Photos</a>
+                                </li>
+                            }
                             {onPage === 'signup' &&
                                 <li className="nav-item active">
-                                    <a className="nav-link" aria-current="page" href="/signup">Sign Up</a>
+                                    <a className="nav-link" aria-current="page" href="/login">Login</a>
                                 </li>
                             }
                             {onPage !== 'signup' &&
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/signup">Sign Up</a>
+                                    <a className="nav-link" href="/login">User</a>
                                 </li>
                             }
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a className="nav-link" onClick={this.props.logout}>Logout</a>
-                            </li>
+                            </li> */}
                             {/* <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
                                 <ul className="dropdown-menu" aria-labelledby="dropdown01">
@@ -71,5 +77,69 @@ class NavBar extends Component {
 
 }
 
-export default NavBar;
+// export default NavBar;
 
+// const NavBar = () => {
+//     const user = useSelector(store => store);
+//     const onPage = this.props.onPage;
+//         return (
+//             <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+//                 <div className="container-fluid">
+//                     <a className="navbar-brand" href="/">Photo Gallery User</a>
+//                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+//                         <span className="navbar-toggler-icon"></span>
+//                     </button>
+
+//                     <div className="collapse navbar-collapse" id="navbarsExampleDefault">
+//                         <ul className="navbar-nav me-auto mb-2 mb-md-0">
+//                             {onPage === 'home' &&
+//                                 <li className="nav-item active">
+//                                     <a className="nav-link" aria-current="page" href="/">Home</a>
+//                                 </li>
+//                             }
+//                             {onPage !== 'home' &&
+//                                 <li className="nav-item">
+//                                     <a className="nav-link" href="/">Home</a>
+//                                 </li>
+//                             }
+//                             {onPage === 'photos' &&
+//                                 <li className="nav-item active">
+//                                     <a className="nav-link" aria-current="page" href="/photos">Photos</a>
+//                                 </li>
+//                             }
+//                             {onPage !== 'photos' &&
+//                                 <li className="nav-item">
+//                                     <a className="nav-link" href="/photos">Photos</a>
+//                                 </li>
+//                             }
+//                             {onPage === 'addphotos' &&
+//                                 <li className="nav-item active">
+//                                     <a className="nav-link" aria-current="page" href="/addphotos">Add Photos</a>
+//                                 </li>
+//                             }
+//                             {onPage !== 'addphotos' &&
+//                                 <li className="nav-item">
+//                                     <a className="nav-link" href="/addphotos">Add Photos</a>
+//                                 </li>
+//                             }
+//                             {onPage === 'signup' &&
+//                                 <li className="nav-item active">
+//                                     <a className="nav-link" aria-current="page" href="/login">Login</a>
+//                                 </li>
+//                             }
+//                             {onPage !== 'signup' &&
+//                                 <li className="nav-item">
+//                                     <a className="nav-link" href="/login">Login</a>
+//                                 </li>
+//                             }
+//                             <li className="nav-item">
+//                                 <a className="nav-link" onClick={this.props.logout}>Logout</a>
+//                             </li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//             </nav>
+//         );
+// }
+
+export default NavBar;

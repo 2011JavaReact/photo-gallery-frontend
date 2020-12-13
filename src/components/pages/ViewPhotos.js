@@ -47,8 +47,8 @@ class ViewPhotos extends Component {
                 <div className="container">
 
                     <div className="jumbotron">
-                        <h1><button href="/addphotos" className="btn btn-primary btn-lg">Post a Photo</button></h1>
-
+                        {/* <h1><button onclick="location.href='/addphotos'" className="btn btn-primary btn-lg">Post a Photo</button></h1> */}
+                        <h1><a href='addphotos' class="btn btn-primary" target="_blank"rel="noopener noreferrer">Post a Photo</a> </h1>
                         <p>Share your favorite photos</p>
                     </div>
 
@@ -84,7 +84,9 @@ class ViewPhotos extends Component {
                             </div>
                         </div>
                     </div> */}
-                    {this.photosList()}
+                    <div className="jumbotron">
+                        {this.photosList()}
+                    </div>
                     <Footer/>
                 </div>
             </body>
