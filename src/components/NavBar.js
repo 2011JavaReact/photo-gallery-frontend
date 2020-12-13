@@ -51,6 +51,9 @@ class NavBar extends Component {
                                     <a className="nav-link" href="/signup">Sign Up</a>
                                 </li>
                             }
+                            <li className="nav-item">
+                                <a className="nav-link" onClick={this.props.logout}>Logout</a>
+                            </li>
                             {/* <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
                                 <ul className="dropdown-menu" aria-labelledby="dropdown01">

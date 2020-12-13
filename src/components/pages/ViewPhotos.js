@@ -19,18 +19,21 @@ class ViewPhotos extends Component {
     };
 
     componentDidMount() {
-        // Axios.get("http://localhost:8080/photo-gallery/photos?for=all", {}, {withCredentials:true})
-        // .then((resp) => {
-        //     this.setState({ photosArray: [...resp.data] });
-        // });
-
-        Axios.get("http://localhost:8080/photo-gallery/photos", {}, {withCredentials:true})
+        Axios.get("http://localhost:8080/photo-gallery/photos?for=all", {}, {withCredentials:true})
         .then((resp) => {
-            console.log(resp);
             this.setState({ photosArray: [...resp.data] });
+            console.log("response: ", resp);
         }).catch(e => {
             console.log("error", e);
         });
+
+        // Axios.get("http://localhost:8080/photo-gallery/photos", {}, {withCredentials:true})
+        // .then((resp) => {
+        //     console.log(resp);
+        //     this.setState({ photosArray: [...resp.data] });
+        // }).catch(e => {
+        //     console.log("error", e);
+        // });
     }
 
     photosList = () => {
@@ -90,5 +93,63 @@ class ViewPhotos extends Component {
     }
 
 }
+
+// const ViewPhotos = ({ photos, refreshPhotos }) => {
+//     const photosList = () => {
+//         return <PhotoList photosArray={photos} />;
+//     }
+
+//     return (
+//         <body className="text-center text-white bg-dark">
+//             <NavBar onPage="photos" />
+//             <div className="container">
+
+//                 <div className="jumbotron">
+//                     <h1><button href="/addphotos" className="btn btn-primary btn-lg">Post a Photo</button></h1>
+
+//                     <p>Share your favorite photos</p>
+//                     <button id="refresh-photos" className="btn btn-primary"
+//                         onClick={refreshPhotos}>
+//                         <i className="fas fa-redo-alt"></i>Refresh</button>
+//                 </div>
+
+//                 {/* <div className="row">
+//                                 <div className="col-md-4">
+//                                     <div className="thumbnail">
+//                                         <a href="https://www.w3schools.com/w3images/lights.jpg">
+//                                             <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Lights" style={{width: '100%'}} />
+//                                             <div className="caption">
+//                                                 <p>Lorem ipsum...</p>
+//                                             </div>
+//                                         </a>
+//                                     </div>
+//                                 </div>
+//                                 <div className="col-md-4">
+//                                     <div className="thumbnail">
+//                                         <a href="https://www.w3schools.com/w3images/nature.jpg">
+//                                             <img src="https://www.w3schools.com/w3images/nature.jpg" alt="Nature" style={{width: '100%'}} />
+//                                             <div className="caption">
+//                                                 <p>Lorem ipsum...</p>
+//                                             </div>
+//                                         </a>
+//                                     </div>
+//                                 </div>
+//                                 <div className="col-md-4">
+//                                     <div className="thumbnail">
+//                                         <a href="https://www.w3schools.com/w3images/fjords.jpg">
+//                                             <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="Fjords" style={{width: '100%'}} />
+//                                             <div className="caption">
+//                                                 <p>Lorem ipsum...</p>
+//                                             </div>
+//                                         </a>
+//                                     </div>
+//                                 </div>
+//                             </div> */}
+//                 {photosList()}
+//                 <Footer />
+//             </div>
+//         </body>
+//     );
+// }
 
 export default ViewPhotos;

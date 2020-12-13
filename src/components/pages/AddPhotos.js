@@ -1,10 +1,13 @@
 import Axios from 'axios';
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import NavBar from '../NavBar';
+import { Redirect } from 'react-router-dom';
+import { useSelector } from "react-redux";
 
-const AddPhotos = () => {
+const AddPhotos = (logout, loggedin) => {
     const [formData, setFormdata] = useState({});
+    const user = useSelector(store=>store);
 
     const insertPhoto = async (e) => {
         e.preventDefault();
@@ -16,12 +19,19 @@ const AddPhotos = () => {
         setFormdata({ ...formData, [e.target.name]: e.target.value });
     }
 
+    useEffect(() => {
+        console.log(loggedin);
+        if(!loggedin){
+            <Redirect to='/login'/>;
+        }
+    }, []);
+
     return (
         <body class="text-center text-white bg-dark">
-            <NavBar onPage="photos" />
+            <NavBar onPage="photos" logout={logout} />
             <section id="photos-form-main">
                 <div className="form-wrap">
-                    <h1>Post a new photo</h1>
+                    <h1>Post a new photo, {user.username}!</h1>
                     <p>Name the photo and add a link</p>
                     <form onSubmit={insertPhoto}>
                         <div className="form-group">
