@@ -2,6 +2,12 @@
 This app is currently not deployed. In order to run this, you must clone Nick Barak's Photo Gallery back end, deploy it onto 
 localhost:8080 through Tomcat, and run this through npm start (after npm i to install all the dependencies).
 
+Technologies used:
+Axios
+Bootstrap
+Axios
+React-Router-Dom 
+
 A sign up page is not currently available; a test user you can
 use to check out the website is username: User 2 with password: pass. 
 
