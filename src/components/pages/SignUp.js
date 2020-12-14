@@ -4,6 +4,7 @@ import { useState } from "react";
 import NavBar from '../NavBar';
 import Footer from '../Footer';
 
+//Basic sign up form.
 const SignUp = () => {
     const [formData, setFormdata] = useState({});
 

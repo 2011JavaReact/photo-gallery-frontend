@@ -6,6 +6,9 @@ import { Redirect } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import Footer from '../Footer';
 
+//The update form displayed when user clicks on a photo they posted 
+//Information passed in the props is the title and id of the corresponding photo.
+//Verification of whether the user is logged in is not present in the backend so this is exploitable
 const UpdatePhotos = /*(logout, loggedin)*/ (props) => {
     const [formData, setFormdata] = useState({});
     const user = useSelector(store=>store);
@@ -15,9 +18,11 @@ const UpdatePhotos = /*(logout, loggedin)*/ (props) => {
     const insertPhoto = async (e) => {
         e.preventDefault();
         console.log("props: ", props.location.aboutProps);
+        const newtitle = formData["title"];
         const url = `http://localhost:8080/photo-gallery/photos?id=${props.location.aboutProps.id}&newTitle=${formData["title"]}`
         Axios.put(url, {}, {withCredentials: true}).then((resp) => {
             console.log(resp);
+            alert('Updated title!');
         });
     }
 

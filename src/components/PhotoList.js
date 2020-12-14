@@ -13,6 +13,7 @@ const PhotoList = (props) => {
                 const deletePhoto = () => {
                     Axios.delete(URL, {}, { withCredentials: true}).then((resp) => {
                         console.log('deleted ', resp);
+                        alert('Deleted ', photo.title);
                     })
                 };
                 if (photo.contributor === localStorage.getItem('user'))

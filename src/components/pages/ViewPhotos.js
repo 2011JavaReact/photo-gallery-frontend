@@ -5,6 +5,8 @@ import Footer from '../Footer'
 import PhotoList from '../PhotoList'
 import Axios from 'axios';
 
+//Performs a get request to load all photos. How the photos are displayed
+//through a loop can be found in PhotoList
 class ViewPhotos extends Component {
     state = {
         photosArray: [

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login } from "../../redux/actions";
 import Axios from 'axios';
 
+//Basic login page. Currently does not have a redirect.
 const Login = () => {
    const [user, setUser] = useState({
       username: "",
@@ -37,6 +38,7 @@ const Login = () => {
       console.log('user: ', user);
    };
 
+   //local storage is used to keep track of users on the client side. insecure and rudimentary, jwts would be better.
    const logout = () => {
       localStorage.removeItem("user");
    };

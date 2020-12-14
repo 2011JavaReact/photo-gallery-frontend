@@ -12,13 +12,8 @@ const AddPhotos = /*(logout, loggedin)*/ () => {
 
     console.log(user);
 
-    // const insertPhoto = async (e) => {
-    //     e.preventDefault();
-    //     const URL = `http://localhost:8080/photo-gallery/photos?title=${formData["title"]}&address=${formData["address"]}`
-    //     const response = await Axios.post('http://localhost:8080/photo-gallery/photos', formData);
-    //     console.log(response);
-    // }
-
+    // Called when the form is submitted, uses the state of the form data to make a POST request through backend 
+    // Uses with credentials to use the session key necessary for backend 
     const insertPhoto = async (e) => {
         e.preventDefault();
         console.log("Entire form data ", formData);
@@ -43,6 +38,7 @@ const AddPhotos = /*(logout, loggedin)*/ () => {
         console.log('User: ' + localStorage.getItem('user'));
     }, []);
 
+    //Redirects user to Login page if they aren't signed in
     if (localStorage.getItem('user') === null){
         console.log('in here');
         return <Redirect to='/login'/>;

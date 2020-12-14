@@ -3,6 +3,8 @@ import './../styles/HomePage.css';
 import NavBar from '../NavBar';
 import Footer from '../Footer'
 
+//Basic homepage that simply displays information, with a Navbar and Footer
+
 class HomePage extends Component {
 
     render() {

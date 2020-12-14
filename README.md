@@ -1,3 +1,25 @@
+# Photo Gallery Front End 
+This app is currently not deployed. In order to run this, you must clone Nick Barak's Photo Gallery back end, deploy it onto 
+localhost:8080 through Tomcat, and run this through npm start (after npm i to install all the dependencies).
+
+A sign up page is not currently available; a test user you can
+use to check out the website is username: User 2 with password: pass. 
+
+The home page simply has basic information on the website, and 
+you will notice a Navbar. Clicking on the Photos portion
+of the Navbar brings you to a page where you can view all the 
+photos posted by other Users, with its corresponding title and
+username. 
+
+Clicking on Post photos will bring you to the Login page if
+you aren't already logged in. Once logged in, you can post
+photos with a title and URL. 
+
+Going back to the Photos page when logged in allows you to edit
+or delete your corresponding photos. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
