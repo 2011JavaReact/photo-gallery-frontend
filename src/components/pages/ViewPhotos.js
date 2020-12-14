@@ -19,7 +19,8 @@ class ViewPhotos extends Component {
     };
 
     componentDidMount() {
-        Axios.get("http://localhost:8080/photo-gallery/photos?for=all", {}, {withCredentials:true})
+        // Axios.get("http://localhost:8080/photo-gallery/photos?for=all", {}, {withCredentials:true})
+        Axios.get("http://127.0.0.1:8080/photo-gallery/photos?for=all", {}, {withCredentials:true})
         .then((resp) => {
             this.setState({ photosArray: [...resp.data] });
             console.log("response: ", resp);

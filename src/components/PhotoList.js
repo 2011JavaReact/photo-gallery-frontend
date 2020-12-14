@@ -21,7 +21,7 @@ const PhotoList = (props) => {
                             <div className="thumbnail">
                                 <img className="center" src={photo.address} style={{ width: '100%' }} />
                                 <div className="caption">
-                                    <p> <a href={photo.address}>id: {photo.id} {photo.title}</a> posted by: {photo.contributor}. <button type="button" className="btn btn-danger btn-sm" onClick={deletePhoto}>Delete</button> 
+                                    <p> <a href={photo.address}>{photo.title}</a> posted by: {photo.contributor}. <button type="button" className="btn btn-danger btn-sm" onClick={deletePhoto}>Delete</button> 
                                     <span className="btn btn-sm"><Link to={{pathname: "/updatephotos", aboutProps:{id: photo.id, title: photo.title}}}>Edit</Link></span></p>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@ const PhotoList = (props) => {
                             <div className="thumbnail">
                                 <img className="center" src={photo.address} style={{ width: '100%' }} />
                                 <div className="caption">
-                                    <p> <a href={photo.address}>id: {photo.id} {photo.title}</a> posted by: {photo.contributor}</p>
+                                    <p> <a href={photo.address}>{photo.title}</a> posted by: {photo.contributor}</p>
                                 </div>
                             </div>
                         </div>

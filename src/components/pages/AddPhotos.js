@@ -21,9 +21,12 @@ const AddPhotos = /*(logout, loggedin)*/ () => {
 
     const insertPhoto = async (e) => {
         e.preventDefault();
+        console.log("Entire form data ", formData);
+        console.log("Addy ", formData["address"], " Title", formData["title"])
         const url = `http://localhost:8080/photo-gallery/photos?title=${formData["title"]}&address=${formData["address"]}`
         Axios.post(url, {}, {withCredentials: true}).then((resp) => {
             console.log('Post response', resp);
+            alert('Posted photo ', formData["title"]);
         });
     };
 
@@ -58,8 +61,8 @@ const AddPhotos = /*(logout, loggedin)*/ () => {
                                 <input type="text" className="form-control" id="inputTitle" name="title" placeholder="Enter title..." value={formData["title"]} onChange={handleChange} />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="pirate-role">Photo URL</label>
-                                <input type="text" className="form-control" name="photo" placeholder="Enter URL..." value={formData["address"]} onChange={handleChange} />
+                                <label htmlFor="inputAddress">Photo URL</label>
+                                <input type="text" className="form-control" id="inputAddress" name="address" placeholder="Enter URL..." value={formData["address"]} onChange={handleChange} />
                             </div>
                             <button className="btn btn-primary">Submit</button>
                         </form>
