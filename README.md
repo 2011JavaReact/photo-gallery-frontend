@@ -1,16 +1,42 @@
-# Photo Gallery Front End 
+# PHOTO GALLERY FRONT END
+
+## Project Description
+This is the front-end for the Photo Gallery API built by Nick Barak. It's a simple Web Application where you can sign in as a user to view other user's photos, and post your own photos with a specific title. Photos will have a title, as well as info about the user who submitted them. Users also have an option to delete their own photos or edit their own titles. 
+
+## Technologies Used
+* React
+* JavaScript
+* AWS RDS
+* HTML/CSS
+* Bootstrap 4
+* Axios 
+* React-Router-Dom 
+
+## Features 
+* Sign-in capabilities 
+* Users can post photos given an image URL
+* Users can view other users' posted photos
+* Users can edit the titles of their own photos
+* Users can delete their own photos
+
+## To-do List
+* Improvements to UI 
+* Ability to submit image files rather than just URL 
+* Ability to view what time a photo was posted 
+* Sign-Up Page 
+
+## Getting Started
+
+To begin, go to the main branch, click the green "Code" button and copy the HTTPS link. Use git clone followed by the copied HTTPS link to clone the repo.
+
 This app is currently not deployed. In order to run this, you must clone Nick Barak's Photo Gallery back end, deploy it onto 
 localhost:8080 through Tomcat, and run this through npm start (after npm i to install all the dependencies).
 
-Technologies used:
-Axios
-Bootstrap
-Axios
-React-Router-Dom 
 
 A sign up page is not currently available; a test user you can
 use to check out the website is username: User 2 with password: pass. 
 
+## Usage
 The home page simply has basic information on the website, and 
 you will notice a Navbar. Clicking on the Photos portion
 of the Navbar brings you to a page where you can view all the 
@@ -23,76 +49,3 @@ photos with a title and URL.
 
 Going back to the Photos page when logged in allows you to edit
 or delete your corresponding photos. 
-
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
